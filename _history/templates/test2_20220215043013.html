@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="layui-form" action="/changed/{{ user1.name }}" method="POST">
+        <input type="text" name="name" required  lay-verify="required" placeholder="请输入用户名" value="{{ user1.name }}" autocomplete="off" class="layui-input">
+    </form>
+    <script src="/static/layui.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function(){
+          var form = layui.form;
+            
+          //监听提交
+          //form.on('submit(formDemo)', function(data){
+         //  layer.msg(JSON.stringify(data.field));
+          //  return false;
+          //});
+             
+        });
+        </script>
+</body>
+</html>

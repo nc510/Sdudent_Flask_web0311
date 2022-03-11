@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆首页</title>
+
+    <link rel="stylesheet" href="/static/css/layui.css">
+</head>
+<body>
+<div style="width: 500px;height: 400px;margin: 150px auto">
+    <form class="layui-form" action="/changed/{{ user1.name }}" method="POST">
+      <div class="layui-form-item">
+        <label class="layui-form-label">姓名</label>
+        <div class="layui-input-block">
+          <input type="text" name="name" required  lay-verify="required" placeholder="请输入用户名" value="{{ user1.name }}" autocomplete="off" class="layui-input">
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">部门</label>
+        <div class="layui-input-block">
+          <input type="dapartment" name="dapartment" required lay-verify="required" placeholder="请输入归属" value="{{ user1.dapartment }}" autocomplete="off" class="layui-input">
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">职务</label>
+        <div class="layui-input-block">
+          <input type="posttion" name="posttion" required lay-verify="required" placeholder="请输入职务" value="{{ user1.posttion }}" autocomplete="off" class="layui-input">
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">工资</label>
+        <div class="layui-input-block">
+          <input type="salary" name="salary" required lay-verify="required" placeholder="请输入工资" value="{{ user1.salary }}" autocomplete="off" class="layui-input">
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <div class="layui-input-block">
+          <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+          <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+      </div>
+    </form>
+</div>
+
+<script src="/static/layui.js"></script>
+
+
+<script>
+//Demo
+layui.use('form', function(){
+  var form = layui.form;
+  //  {#
+  //监听提交
+  //form.on('submit(formDemo)', function(data){
+  //  layer.msg(JSON.stringify(data.field));
+  //  return false;
+  });
+
+
+</script>
+
+</body>
+</html>
